@@ -1,0 +1,18 @@
+body
+{
+  background-image: url("cave.webp");
+    font-family: 'Press Start 2P';
+}
+h1
+{
+  color: white;
+}
+p
+{
+ color: white;
+}
+#button
+{
+  background-color: #999999;
+    font-family: 'Press Start 2P';
+}

@@ -1,0 +1,23 @@
+body
+{
+  background-image: url("fork.jpg");
+    font-family: 'Press Start 2P';
+}
+h1
+{
+  color: yellow;
+}
+p
+{
+ color: white;
+}
+#button
+{
+  background-color: #999999;
+    font-family: 'Press Start 2P';
+}
+#button2
+{
+  background-color: #999999;
+    font-family: 'Press Start 2P';
+}

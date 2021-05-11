@@ -1,0 +1,112 @@
+<html>
+  <head>
+  <script>
+  function hide()
+  {
+    document.getElementById('answer').style.visibility = "hidden";
+    document.getElementById('button').style.visibility = "hidden";
+    document.getElementById('button2').style.visibility = "hidden";
+    document.getElementById('button3').style.visibility = "hidden";
+    document.getElementById('300,000').style.visibility = "hidden";
+    document.getElementById('7.5').style.visibility = "hidden";
+    document.getElementById('table').style.visibility = "hidden";
+    document.getElementById('gabagoop').style.visibility = "hidden";
+  }
+  function actionOne()
+  {
+    document.getElementById('question').innerHTML = "Would you really fight this man?";
+    document.getElementById('answer').style.visibility = "visible";
+    document.getElementById('button').style.visibility = "visible";
+
+  }
+  function checkanswer()
+    {
+      var x = document.getElementById('answer').value;
+      if(x == "fight")
+      {
+        document.getElementById("output1").innerHTML = "<p onMouseOver = 'nextPage2()'>Oh boy... how much did my parents give me to start amazon?</p>";
+      }
+      else
+      {
+        document.getElementById("output1").innerHTML = "<p onMouseOver = 'nextPage()'>you cant run</p>";
+      }
+    }
+    function daddiesmoney()
+      {
+        var x = document.getElementById('300,000').value;
+        if(x == "300,000")
+        {
+          document.getElementById("output2").innerHTML = "<p onMouseOver = 'nextPage3()'>Correct... what percent of the population of Seattle works for amazon?</p>";
+        }
+        else
+        {
+          document.getElementById("output1").innerHTML = "<p onMouseOver = 'nextPage()'>wrong</p>";
+        }
+      }
+      function seattle()
+        {
+          var x = document.getElementById('7.5').value;
+          if(x == "7.5")
+          {
+            document.getElementById("output3").innerHTML = "<p onMouseOver = 'nextPage4()'>Which one of these women is my ex-wife that I cheated on?</p>";
+          }
+          else
+          {
+            document.getElementById("output1").innerHTML = "<p onMouseOver = 'nextPage()'>Population of seattle is 725,000 and there is 54375 amazon workers</p>";
+          }
+        }
+    function nextPage()
+    {
+      window.location.href = "jeff.html";
+    }
+    function nextPage2()
+    {
+      document.getElementById('button2').style.visibility = "visible";
+      document.getElementById('300,000').style.visibility = "visible";
+    }
+    function nextPage3()
+    {
+      document.getElementById('button3').style.visibility = "visible";
+      document.getElementById('7.5').style.visibility = "visible";
+    }
+    function nextPage4()
+    {
+      document.getElementById('table').style.visibility = "visible";
+      document.getElementById('7.5').style.visibility = "visible";
+    }
+    function winner()
+    {
+    document.getElementById('gabagoop').style.visibility = "visible";
+    }
+</script>
+
+
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "jeff.css">
+    <body onload = "hide()">
+    <h1>THE FINAL BOSS... JEFF BEZOS</h1>
+    <p id = pic>
+    <img src = "jeff.jpeg" onclick = "actionOne()" height="400px" width="600px">
+    </p>
+    <p id = "question"></p>
+    <input type = "text" id = "answer">
+    <input type= "button" class = "button" id = "button" value = "Dont." onclick="checkanswer()">
+    <p id = "output1"></p>
+    <input type = "text" id = "300,000">
+    <input type= "button" class = "button" id = "button2" value = "Check." onclick="daddiesmoney()">
+    <p id = "output2"></p>
+    <input type = "text" id = "7.5">
+    <input type= "button" id = "button3" class = "button" value = "Check." onclick="seattle()">
+    <p id = "output3"></p>
+    <table id = "table">
+      <tr>
+        <td><img src = "monica.jpg" height="200px" width="300px"></td>
+        <td><img src = "wife.jpg" onclick = "winner()" height="200px" width="300px"></td>
+        <td><img src = "kylie.jpg" height="200px" width="300px"></td>
+      </tr>
+    </table>
+        <h1 id = "gabagoop">Jeff Bezos proceeds to cry in defeat because of your imense amazon knoledge... You Win!</h1>
+  </body>
+</html>

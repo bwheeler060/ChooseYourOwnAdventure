@@ -1,0 +1,55 @@
+<html>
+  <head>
+  <script>
+  function hide()
+  {
+    document.getElementById('answer').style.visibility = "hidden";
+    document.getElementById('button').style.visibility = "hidden";
+  }
+  function actionOne()
+  {
+    document.getElementById('question').innerHTML = "Suddenly you boat starts rocking, and a storm appears along with a massive kracken";
+    document.getElementById('answer').style.visibility = "visible";
+    document.getElementById('button').style.visibility = "visible";
+
+  }
+  function checkanswer()
+    {
+      var name =    window.localStorage.getItem("userName");
+      var x = document.getElementById('answer').value;
+      if(x == "fight")
+      {
+        document.getElementById("output1").innerHTML = name + "<p onMouseOver = 'nextPage2()'> did you even see how big that was compared to your boat? back you go.</p>";
+      }
+      else
+      {
+        document.getElementById("output1").innerHTML = "<p onMouseOver = 'nextPage()'>I mean thats fair</p>";
+      }
+    }
+
+    function nextPage()
+    {
+      window.location.href = "leviathan.html";
+    }
+    function nextPage2()
+    {
+      window.location.href = "roam.html";
+    }
+</script>
+
+
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "sea.css">
+    <body onload = "hide()">
+    <h1>Clicky Clicky</h1>
+    <p id = pic>
+    <img src = "kraken.jpeg" onclick = "actionOne()">
+    </p>
+    <p id = "question"></p>
+    <input type = "text" id = "answer">
+    <input type= "button" id = "button" value = "I got this one" onclick="checkanswer()">
+    <p id = "output1"></p>
+  </body>
+</html>
